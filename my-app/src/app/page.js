@@ -7,6 +7,7 @@ async function getPosts() {
 }
 export default async function HomePage() {
   const posts = await getPosts();
+  console.log("Fetched posts:", posts);
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />

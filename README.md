@@ -1,4 +1,4 @@
-# 📰 Blog Listing Page – NextJS & Tailwind CSS
+# Blog Listing Page – NextJS & Tailwind CSS
 
 > **Thực hành 1** | Môn: Thực hành Lập trình Web | Nhóm 2
 
@@ -24,18 +24,7 @@
 - Giao diện **Responsive** — hỗ trợ Mobile, Tablet, Desktop
 - Trang chi tiết bài viết theo dynamic route `/blog/[id]`
 - Fetch dữ liệu phía Server (Server Component)
-- Component tái sử dụng: `Header`, `BlogCard`, `Badge`
-
----
-
-## 🛠️ Công nghệ sử dụng
-
-| Công nghệ | Phiên bản | Mục đích |
-|---|---|---|
-| [Next.js](https://nextjs.org/) | 14+ | Framework chính, App Router |
-| [Tailwind CSS](https://tailwindcss.com/) | 3+ | Styling & Responsive |
-| [JSONPlaceholder](https://jsonplaceholder.typicode.com) | — | Mock REST API |
-| ESLint | — | Kiểm tra chất lượng code |
+- Component: `Header`, `BlogCard`, `Badge`
 
 ---
 
