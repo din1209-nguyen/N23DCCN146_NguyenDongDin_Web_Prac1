@@ -1,11 +1,9 @@
-import Badge from "./Badge";
-
 export default function BlogCard({ post }) {
   return (
     <div className="flex h-full flex-col rounded-xl border bg-white p-5 shadow-sm transition hover:shadow-lg">
-      <div className="mb-2">
-        <Badge label={post.category || "General"} color="indigo" />
-      </div>
+      <span className="text-xs font-semibold uppercase tracking-wide text-indigo-500">
+        {post.category}
+      </span>
 
       <h2 className="mt-2 mb-1 line-clamp-2 text-lg font-bold">
         {post.title}
