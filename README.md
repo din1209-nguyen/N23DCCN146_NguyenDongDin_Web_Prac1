@@ -4,7 +4,7 @@
 
 ---
 
-## 👤 Thông tin sinh viên
+## Thông tin sinh viên
 
 | Thông tin | Chi tiết |
 |---|---|
@@ -50,7 +50,7 @@
 
 ---
 
-## 🚀 Hướng dẫn chạy dự án
+## Hướng dẫn chạy dự án
 
 ### Yêu cầu
 - Node.js >= 18.x
