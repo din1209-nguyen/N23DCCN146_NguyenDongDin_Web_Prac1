@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📰 Blog Listing Page – NextJS & Tailwind CSS
 
-## Getting Started
+> **Thực hành 1** | Môn: Thực hành Lập trình Web | Nhóm 2
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 👤 Thông tin sinh viên
+
+| Thông tin | Chi tiết |
+|---|---|
+| **Họ và tên** | `Nguyễn Đông Din` |
+| **Mã số sinh viên** | `N23DCCN146` |
+| **Lớp** | Nhóm 2 |
+| **Bài thực hành** | Thực hành 1 – Blog Listing Page |
+
+---
+
+## Mô tả dự án
+
+Ứng dụng web hiển thị danh sách bài viết blog được xây dựng bằng **NextJS 14 (App Router)** và **Tailwind CSS**. Dữ liệu bài viết được lấy từ REST API công khai [JSONPlaceholder](https://jsonplaceholder.typicode.com).
+
+### Tính năng chính
+- Hiển thị danh sách 12 bài viết dạng lưới (Grid Layout)
+- Giao diện **Responsive** — hỗ trợ Mobile, Tablet, Desktop
+- Trang chi tiết bài viết theo dynamic route `/blog/[id]`
+- Fetch dữ liệu phía Server (Server Component)
+- Component tái sử dụng: `Header`, `BlogCard`, `Badge`
+
+---
+
+## 🛠️ Công nghệ sử dụng
+
+| Công nghệ | Phiên bản | Mục đích |
+|---|---|---|
+| [Next.js](https://nextjs.org/) | 14+ | Framework chính, App Router |
+| [Tailwind CSS](https://tailwindcss.com/) | 3+ | Styling & Responsive |
+| [JSONPlaceholder](https://jsonplaceholder.typicode.com) | — | Mock REST API |
+| ESLint | — | Kiểm tra chất lượng code |
+
+---
+
+## Cấu trúc thư mục
+
+```
+├── app/
+│   ├── layout.js           # Root layout
+│   ├── page.js             # Trang danh sách bài viết (/)
+│   ├── globals.css         # Tailwind base styles
+│   └── blog/
+│       └── [id]/
+│           └── page.js     # Trang chi tiết bài viết (/blog/[id])
+├── components/
+│   ├── Header.js           # Component Header chung
+│   ├── BlogCard.js         # Card hiển thị 1 bài viết
+│   └── Badge.js            # Badge/tag tái sử dụng
+├── public/
+├── next.config.js
+├── tailwind.config.js
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Hướng dẫn chạy dự án
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Yêu cầu
+- Node.js >= 18.x
+- npm hoặc yarn
 
-## Learn More
+### Các bước thực hiện
 
-To learn more about Next.js, take a look at the following resources:
+**1. Clone repository**
+```bash
+git clone https://github.com/din1209-nguyen/N23DCCN146_NguyenDongDin_Web_Prac1.git
+cd N23DCCN146_NguyenDongDin_Web_Prac1/my-app
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**2. Cài đặt dependencies**
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**3. Chạy development server**
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+**4. Mở trình duyệt**
+```
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API sử dụng
+
+| Endpoint | Mô tả |
+|---|---|
+| `GET /posts` | Lấy danh sách tất cả bài viết |
+| `GET /posts/:id` | Lấy chi tiết 1 bài viết theo ID |
+
+Base URL: `https://jsonplaceholder.typicode.com`
+
+---
+
+## Tiêu chí hoàn thành
+
+- [x] Khởi tạo dự án NextJS với App Router
+- [x] Kết nối GitHub, đẩy code lên Public Repository
+- [x] Xây dựng Header component
+- [x] Xây dựng Badge component tái sử dụng
+- [x] Xây dựng BlogCard component
+- [x] Fetch dữ liệu từ JSONPlaceholder API
+- [x] Hiển thị danh sách bài viết dạng Grid (Responsive)
+- [x] Trang chi tiết bài viết `/blog/[id]`
+- [x] Nút "Back to Blog" trên trang chi tiết
+- [x] Giao diện responsive (Mobile / Tablet / Desktop)
